@@ -46,9 +46,12 @@ def query(body):
       index = 'tweets',
       body = query_body
         )
-
+    max_score = response["hits"]["max_score"]
     hits = response["hits"]["hits"]
-    return [float(response["hits"]["max_score"]), hits]
+    if (max_score == None)  and (hits== []):
+        return [None, None]
+    else: 
+        return [float(response["hits"]["max_score"]), hits]
 
 
 
@@ -75,9 +78,11 @@ def index2():
 
     response = query(body)
 
+    if response[0] == None:
+        return {}
+
 
     dict = { }
-
 
     for doc in response[1]:
         dict[doc['_id']] = {'lat' : doc['_source']['location']['coordinates'][1],\
