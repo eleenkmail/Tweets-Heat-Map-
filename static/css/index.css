@@ -1,0 +1,51 @@
+
+h1{
+   text-align: center;
+}
+#all{
+    display: flex;
+    flex-flow: wrap; 
+
+}
+
+#map_container{
+    flex: 75%;    
+}
+
+#map{
+    height: 600px;
+}
+
+#parent {
+    
+    flex: 20%; 
+    display: flex;
+    flex-flow: wrap;
+    padding-left: 50px;
+    
+    }
+
+    .child{
+    flex: 100%; 
+    }
+
+    .child > input{
+    vertical-align: middle;
+    margin: 5px 0 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    width: 200px;
+    }
+
+    .child > button{
+    vertical-align: middle;
+    padding: 15px;
+    width: 200px;
+    border-radius: 5px;
+    color: white;    
+    background-color: rgb(12, 91, 237);
+    border: 1px solid rgb(53, 86, 255);
+    }
+
+   
