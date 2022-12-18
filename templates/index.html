@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="../static/css/index.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    
+<style>
+
+</style>
+
+</head>
+<body>
+<h1>Draw your HeatMap</h1>
+<div id="all">
+<form id="parent" >
+<div class="child" id="word">
+    <label> Word </label>
+    <br>
+    <input type="text" id="text" required>
+</div>
+
+<div class="child">
+    <label> right longitude </label>
+    <br>
+    <input type="number" id="rlon" min="-180.00000" max="180.00000" required>
+</div>
+
+
+<div class="child" >
+    <label> left longitude</label>
+    <br>
+    <input type="number" id="llon" min="-180.00000" max="180.00000" required>
+</div>
+
+
+<div class="child">
+    <label> top latitude </label>
+    <br>
+    <input type="number" id="tlat" min="-90.00000" max="90.00000" required>
+</div>
+
+<div class="child">
+    <label> buttom latitude </label>
+    <br>
+    <input type="number" id="blat" min="-90.00000" max="90.00000" required>
+</div>
+
+<div class="child">
+    <label>start date</label>
+    <br>
+    <input type="date" id="gte" required>
+</div>
+
+<div class="child">
+    <label>end date</label>
+    <br>
+    <input type="date" id="lte" required>
+</div>
+
+<div class="child">
+    <button id="btn" > Search </button>
+</div>
+
+</form>
+
+<div id="map_container">
+<div id="map"></div>
+</div>
+
+</div>
+<script src="../static/js/index.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/heatmapjs@2.0.2/heatmap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-heatmap@1.0.0/leaflet-heatmap.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/heatmap.js/2.0.2/heatmap.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+
+</body>
+
