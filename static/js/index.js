@@ -52,10 +52,10 @@
           
      // to make result logic and to prevernt server errors
                 
-     if($("#llon").val() > $("#rlon").val()){
+     if(parseFloat($("#llon").val()) > parseFloat($("#rlon").val())){
       alert("right longitude should be greater then left longitude");
      }
-     if($("#blat").val() >  $("#tlat").val()){
+     else if(parseFloat($("#blat").val()) >  parseFloat($("#tlat").val())){
       alert("top latitude should be greater then buttom longitude");
      }
      else{
@@ -65,10 +65,10 @@
       //data from html form
       var formData = {
         text: $("#text").val(),
-        llon: $("#llon").val(), // left longitude
-        rlon: $("#rlon").val(), // right longitude
-        tlat: $("#tlat").val(), // top latitude
-        blat: $("#blat").val(), // buttom latitude
+        llon: parseFloat($("#llon").val()), // left longitude
+        rlon: parseFloat($("#rlon").val()), // right longitude
+        tlat: parseFloat($("#tlat").val()), // top latitude
+        blat: parseFloat($("#blat").val()), // buttom latitude
         gte: $("#gte").val(),   // start date of range
         lte: $("#lte").val(),   // end date of range
 
